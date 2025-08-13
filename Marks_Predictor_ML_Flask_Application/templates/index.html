@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Score Predictor</title>
+</head>
+<body>
+    <h2>Predict Student Scores from Attendance</h2>
+    <input type="number" id="attendance" placeholder="Enter Attendance Percentage">
+    <button onclick="predict()">Predict</button>
+
+    <h3>Prediction:</h3>
+    <p id="result"></p>
+
+    <script>
+        function predict() {
+            const attendance = document.getElementById('attendance').value;
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({attendance: parseFloat(attendance)})
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('result').innerHTML = 
+                    `Math Score: ${data.Math_Score.toFixed(2)} <br>
+                     Science Score: ${data.Science_Score.toFixed(2)}`;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
