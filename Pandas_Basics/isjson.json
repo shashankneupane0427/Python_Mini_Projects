@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alice",
+    "age": 24,
+    "department": "Computer Science",
+    "marks": 88
+  },
+  {
+    "id": 2,
+    "name": "Bob",
+    "age": 22,
+    "department": "Mathematics",
+    "marks": 75
+  },
+  {
+    "id": 3,
+    "name": "Charlie",
+    "age": 23,
+    "department": "Physics",
+    "marks": 92
+  },
+  {
+    "id": 4,
+    "name": "David",
+    "age": 21,
+    "department": "Computer Science",
+    "marks": 81
+  },
+  {
+    "id": 5,
+    "name": "Eva",
+    "age": 24,
+    "department": "Mathematics",
+    "marks": 95
+  }
+]
